@@ -8,9 +8,6 @@ from torch import Tensor
 import torch.nn.functional as F
 import numpy as np
 
-from layers.MTST_backbone import MTST_backbone as backbone
-
-
 from layers.PatchTST_layers import series_decomp
 
 from yacs.config import CfgNode as CN

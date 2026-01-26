@@ -14,7 +14,7 @@ import numpy as np
 import pandas
 
 from models import Informer, Autoformer, Transformer, DLinear, Linear, NLinear, PatchTST, MTST
-from layers import KoopMambaFFT, Koopa
+from layers import Koopa
 from torch.optim import lr_scheduler
 
 warnings.filterwarnings('ignore')

@@ -36,17 +36,17 @@ parser.add_argument('--random_seed', type=int, default=2021, help='random seed')
 # basic config
 parser.add_argument('--is_training', type=int, required=True, default=1, help='status')
 parser.add_argument('--model_id', type=str, required=True, default='test', help='model id')
-parser.add_argument('--model', type=str, required=True, default='Autoformer',
+parser.add_argument('--model', type=str, required=True, default='KoopBlock',
                     help='model name, options: [Autoformer, Informer, Transformer]')
 
 # data loader
-parser.add_argument('--data', type=str, required=True, default='ETTm1', help='dataset type')
-parser.add_argument('--root_path', type=str, default='./data/ETT/', help='root path of the data file')
-parser.add_argument('--data_path', type=str, default='ETTh1.csv', help='data file')
-parser.add_argument('--features', type=str, default='M',
+parser.add_argument('--data', type=str, required=True, default='CRSP', help='dataset type')
+parser.add_argument('--root_path', type=str, default='./data/', help='root path of the data file')
+parser.add_argument('--data_path', type=str, default='crsp.csv', help='data file')
+parser.add_argument('--features', type=str, default='S',
                     help='forecasting task, options:[M, S, MS]; M:multivariate predict multivariate, S:univariate predict univariate, MS:multivariate predict univariate')
-parser.add_argument('--target', type=str, default='OT', help='target feature in S or MS task')
-parser.add_argument('--freq', type=str, default='h',
+parser.add_argument('--target', type=str, default='dlyprc', help='target feature in S or MS task')
+parser.add_argument('--freq', type=str, default='d',
                     help='freq for time features encoding, options:[s:secondly, t:minutely, h:hourly, d:daily, b:business days, w:weekly, m:monthly], you can also use more detailed freq like 15min or 3h')
 parser.add_argument('--checkpoints', type=str, default='./checkpoints/', help='location of model checkpoints')
 
@@ -100,7 +100,7 @@ parser.add_argument('--distil', action='store_false',
                     help='whether to use distilling in encoder, using this argument means not using distilling',
                     default=True)
 parser.add_argument('--dropout', type=float, default=0.05, help='dropout')
-parser.add_argument('--embed', type=str, default='timeF',
+parser.add_argument('--embed', type=str, default='learned',
                     help='time features encoding, options:[timeF, fixed, learned]')
 parser.add_argument('--activation', type=str, default='gelu', help='activation')
 parser.add_argument('--output_attention', action='store_true', help='whether to output attention in ecoder')

@@ -27,6 +27,9 @@ wheels/
 # VS Code
 .vscode/
 
+data/
+checkpoints/
+
 # Jupyter Notebook
 .ipynb_checkpoints
 *.ipynb

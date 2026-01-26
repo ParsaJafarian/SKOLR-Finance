@@ -5,7 +5,7 @@ from utils.losses import mape_loss, mase_loss, smape_loss
 
 from exp.exp_basic import Exp_Basic
 from models import Informer, Autoformer, Transformer, DLinear, Linear, NLinear, PatchTST, MTST, LRU
-from layers import Koopa, KoopMamba, KoopMambaFFT, KoopMambaFFT_GLU, KoopBlock, KoopBlock_P, KoopBlock_noD
+from layers import Koopa, KoopBlock, KoopBlock_P
 # KoopMambav2, KoopMambav3, KoopMamba_test, KoopMambav4, KoopMambav4_1, KoopMambav1_1, \
 # KoopMambav6, KoopMambav7, KoopMambav2_3, KoopMambav4_4,KoopMambav4_1, KoopMambav4_5, KoopMambav4_6, KoopMambav8_4, KoopMambav4_7, \
 # KoopMambav9, KoopMambav9_4, KoopMambav4_4_2layer,, FKoopMamba, KoopMambaFFT_GLUv2, KoopMamba_inv
@@ -80,28 +80,12 @@ class Exp_Main(Exp_Basic):
             'PatchTST': PatchTST,
             'MTST': MTST,
             'Koopa': Koopa,
-            'KoopMamba': KoopMamba,
-            'KoopMambaFFT': KoopMambaFFT,
-            'GLU': KoopMambaFFT_GLU,
             'KoopBlock': KoopBlock,
-            'KoopBlock_noD':KoopBlock_noD,
             'KoopBlock_P': KoopBlock_P,
             'LRU': LRU
         }
-        # 'KoopMambaCI': KoopMambav2,
-        # 'KoopRec': KoopMambav3,
-        # 'KoopMambaFFN': KoopMambav4_1,
-        # 'FFN': KoopMambav1_1,
-        # 'MultiKoop': KoopMambav6,
-        # 'DKoopMamba': KoopMambav8_4,
-        # 'ChannelMix': KoopMambav4_6,
-        # '2layer': KoopMambav4_4_2layer,
-        # 'InvRNN': KoopMambav9,
-        # 'GLU_freq': FKoopMamba,
-        # 'GLUv2': KoopMambaFFT_GLUv2,
-        # 'KoopMamba_inv': KoopMamba_inv,
         self.args.mask_spectrum = self._get_mask_spectrum()
-        model = model_dict[self.args.model].Model(self.args).float().cuda()
+        model = model_dict[self.args.model].Model(self.args).float().to(self.device)
 
         self.inv_loss_alpha = self.args.inv_loss_alpha
 

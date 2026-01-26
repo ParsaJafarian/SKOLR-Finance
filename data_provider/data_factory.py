@@ -1,4 +1,4 @@
-from data_provider.data_loader import Dataset_ETT_hour, Dataset_ETT_minute, Dataset_Custom, Dataset_Pred, Dataset_M4, Dataset_Duffing, Dataset_LotkaVolterra, Dataset_Lorenz, Dataset_Oscillator
+from data_provider.data_loader import Dataset_ETT_hour, Dataset_ETT_minute, Dataset_Custom, Dataset_Pred, Dataset_M4, Dataset_Duffing, Dataset_LotkaVolterra, Dataset_Lorenz, Dataset_Oscillator, Dataset_CRSP
 from torch.utils.data import DataLoader
 
 data_dict = {
@@ -11,7 +11,8 @@ data_dict = {
     'Duffing': Dataset_Duffing,
     'LotkaVolterra': Dataset_LotkaVolterra,
     'Lorenz': Dataset_Lorenz,
-    'Pendulum': Dataset_Oscillator
+    'Pendulum': Dataset_Oscillator,
+    'CRSP': Dataset_CRSP,
 }
 
 
