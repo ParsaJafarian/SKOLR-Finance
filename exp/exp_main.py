@@ -25,6 +25,7 @@ import time
 
 import warnings
 import matplotlib.pyplot as plt
+import pandas as pd
 import numpy as np
 import mlflow
 import pickle as pkl
@@ -525,7 +526,7 @@ class Exp_Main(Exp_Basic):
             if not os.path.exists(folder_path):
                 os.makedirs(folder_path)
 
-            forecasts_df = pandas.DataFrame(preds[:, :, 0], columns=[f'V{i + 1}' for i in range(self.args.pred_len)])
+            forecasts_df = pd.DataFrame(preds[:, :, 0], columns=[f'V{i + 1}' for i in range(self.args.pred_len)])
             forecasts_df.index = test_loader.dataset.ids[:preds.shape[0]]
             forecasts_df.index.name = 'id'
             forecasts_df.set_index(forecasts_df.columns[0], inplace=True)
@@ -571,9 +572,9 @@ class Exp_Main(Exp_Basic):
 
 
             # np.save(folder_path + 'metrics.npy', np.array([mae, mse, rmse, mape, mspe,rse, corr]))
-            # np.save(folder_path + 'pred.npy', preds)
-            # np.save(folder_path + 'true.npy', trues)
-            # np.save(folder_path + 'x.npy', inputx)
+            np.save(folder_path + 'pred.npy', preds)
+            np.save(folder_path + 'true.npy', trues)
+            np.save(folder_path + 'x.npy', inputx)  
             # np.save(folder_path + 'branches.npy', branches)
 
         return

@@ -1,0 +1,54 @@
+1_KoopBlock_mskglobal_CITrue_hl96_pl96_dm128_hd64_el2_dr0.05_bn3_sl48_shareEFalse_0  
+mse:0.0007271983195096254, mae:0.020851723849773407, rse:0.6171761155128479
+
+1_KoopBlock_mskglobal_CITrue_hl96_pl96_dm128_hd64_el2_dr0.05_bn3_sl48_shareEFalse_1  
+mse:0.0007351606618613005, mae:0.02076789177954197, rse:0.6205457448959351
+
+1_KoopBlock_mskglobal_CITrue_hl96_pl96_dm128_hd64_el2_dr0.05_bn3_sl48_shareEFalse_0  
+mse:0.0007271983195096254, mae:0.020851723849773407, rse:0.6171761155128479
+
+1_KoopBlock_mskglobal_CITrue_hl96_pl96_dm128_hd64_el2_dr0.05_bn3_sl48_shareEFalse_1  
+mse:0.0007351606618613005, mae:0.02076789177954197, rse:0.6205457448959351
+
+1_KoopBlock_mskglobal_CITrue_hl96_pl96_dm128_hd64_el2_dr0.05_bn3_sl48_shareEFalse_0  
+mse:0.0007271983195096254, mae:0.020851723849773407, rse:0.6171761155128479
+
+1_KoopBlock_mskglobal_CITrue_hl96_pl96_dm128_hd64_el2_dr0.05_bn3_sl48_shareEFalse_0  
+mse:0.0007271983195096254, mae:0.020851723849773407, rse:0.6171761155128479
+
+1_KoopBlock_mskglobal_CITrue_hl96_pl96_dm128_hd64_el2_dr0.05_bn3_sl48_shareEFalse_0  
+mse:0.0007271983195096254, mae:0.020851723849773407, rse:0.6171761155128479
+
+1_KoopBlock_mskglobal_CITrue_hl96_pl96_dm128_hd64_el2_dr0.05_bn3_sl48_shareEFalse_0  
+mse:0.0007271983195096254, mae:0.020851723849773407, rse:0.6171761155128479
+
+1_KoopBlock_mskglobal_CITrue_hl24_pl12_dm32_hd32_el1_dr0.05_bn2_sl24_shareEFalse_0  
+mse:8.575526589993387e-05, mae:0.006732739973813295, rse:0.22595880925655365
+
+1_KoopBlock_mskglobal_CITrue_hl24_pl12_dm32_hd32_el1_dr0.05_bn2_sl24_shareEFalse_1  
+mse:8.822246309136972e-05, mae:0.006844719406217337, rse:0.22918617725372314
+
+1_KoopBlock_mskglobal_CITrue_hl24_pl12_dm32_hd32_el1_dr0.05_bn2_sl24_shareEFalse_0  
+mse:8.575526589993387e-05, mae:0.006732739973813295, rse:0.22595880925655365
+
+1_PatchTST_mskglobal_CITrue_hl96_pl96_dm128_hd64_el2_dr0.1_bn3_sl48_shareEFalse_0  
+mse:0.0007321031880564988, mae:0.020552942529320717, rse:0.6192540526390076
+
+1_PatchTST_mskglobal_CITrue_hl24_pl12_dm32_hd32_el1_dr0.1_bn2_sl24_shareEFalse_0  
+mse:7.69702746765688e-05, mae:0.0062596299685537815, rse:0.21407224237918854
+
+1_PatchTST_mskglobal_CITrue_hl24_pl12_dm32_hd32_el1_dr0.1_bn2_sl24_shareEFalse_1  
+mse:7.71361228544265e-05, mae:0.006272098049521446, rse:0.21430276334285736
+
+1_PatchTST_mskglobal_CITrue_hl24_pl12_dm32_hd32_el1_dr0.1_bn2_sl24_shareEFalse_0  
+mse:7.69702746765688e-05, mae:0.0062596299685537815, rse:0.21407224237918854
+
+1_KoopBlock_mskglobal_CITrue_hl24_pl12_dm32_hd32_el1_dr0.1_bn2_sl24_shareEFalse_0  
+mse:8.619689469924197e-05, mae:0.006755974609404802, rse:0.22653989493846893
+
+1_KoopBlock_mskglobal_CITrue_hl24_pl12_dm32_hd32_el1_dr0.1_bn2_sl24_shareEFalse_1  
+mse:8.999650162877515e-05, mae:0.006917900405824184, rse:0.23147904872894287
+
+1_PatchTST_mskglobal_CITrue_hl24_pl12_dm32_hd32_el1_dr0.1_bn2_sl24_shareEFalse_0  
+mse:7.69702746765688e-05, mae:0.0062596299685537815, rse:0.21407224237918854
+

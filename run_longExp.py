@@ -58,26 +58,25 @@ parser.add_argument('--pred_len', type=int, default=96, help='prediction sequenc
 
 # MTST
 parser.add_argument('--n_branches', type=int, default=1, help='num of paralized encoder layers')
-parser.add_argument('--patch_len_ls', type=str, default='16', help='list of patch length')
-parser.add_argument('--stride_ls', type=str, default='8', help='list of stride')
-parser.add_argument('--d_model_ls', type=str, default='128', help='list of d_model for MTST')
-parser.add_argument('--n_heads_ls', type=str, default='16', help='list of head number for MTST')
+parser.add_argument('--patch_len_ls', type=str, default='8', help='list of patch length')
+parser.add_argument('--stride_ls', type=str, default='4', help='list of stride')
+parser.add_argument('--d_model_ls', type=str, default='32', help='list of d_model for MTST')
+parser.add_argument('--n_heads_ls', type=str, default='4', help='list of head number for MTST')
 parser.add_argument('--rel_pe', type=str, default='null', help='Type of relative PE: rel_sin')
-
 
 # PatchTST
 parser.add_argument('--res_attn', action='store_true', help='res_attention, default False')
 parser.add_argument('--head_type', type=str, default='flatten', help='linear head type')
-parser.add_argument('--fc_dropout', type=float, default=0.05, help='fully connected dropout')
-parser.add_argument('--head_dropout', type=float, default=0.0, help='head dropout')
-parser.add_argument('--patch_len', type=int, default=16, help='patch length')
-parser.add_argument('--stride', type=int, default=8, help='stride')
+parser.add_argument('--fc_dropout', type=float, default=0.1, help='fully connected dropout')
+parser.add_argument('--head_dropout', type=float, default=0.1, help='head dropout')
+parser.add_argument('--patch_len', type=int, default=8, help='patch length')
+parser.add_argument('--stride', type=int, default=4, help='stride')
 parser.add_argument('--padding_patch', default='None', help='None: None; end: padding on the end')
 parser.add_argument('--revin', type=int, default=1, help='RevIN; True 1 False 0')
 parser.add_argument('--affine', type=int, default=0, help='RevIN-affine; True 1 False 0')
-parser.add_argument('--subtract_last', type=int, default=0, help='0: subtract mean; 1: subtract last')
+parser.add_argument('--subtract_last', type=int, default=1, help='0: subtract mean; 1: subtract last')
 parser.add_argument('--decomposition', type=int, default=0, help='decomposition; True 1 False 0')
-parser.add_argument('--kernel_size', type=int, default=25, help='decomposition-kernel')
+parser.add_argument('--kernel_size', type=int, default=7, help='decomposition-kernel')
 parser.add_argument('--individual', type=int, default=0, help='individual head; True 1 False 0')
 parser.add_argument('--store_attn', action='store_true', help='save and print attn scores')
 parser.add_argument('--pre_norm', action='store_true', help='pre normalization')
@@ -86,24 +85,21 @@ parser.add_argument('--no_learn_pe', action='store_false', help='when try sincos
 
 # Formers 
 parser.add_argument('--embed_type', type=int, default=0, help='0: default 1: value embedding + temporal embedding + positional embedding 2: value embedding + temporal embedding 3: value embedding + positional embedding 4: value embedding')
-parser.add_argument('--enc_in', type=int, default=7, help='encoder input size') # DLinear with --individual, use this hyperparameter as the number of channels
+parser.add_argument('--enc_in', type=int, default=7, help='encoder input size')
 parser.add_argument('--dec_in', type=int, default=7, help='decoder input size')
 parser.add_argument('--c_out', type=int, default=7, help='output size')
-parser.add_argument('--d_model', type=int, default=512, help='dimension of model')
-parser.add_argument('--n_heads', type=int, default=8, help='num of heads')
-parser.add_argument('--e_layers', type=int, default=2, help='num of encoder layers')
+parser.add_argument('--d_model', type=int, default=64, help='dimension of model')
+parser.add_argument('--n_heads', type=int, default=4, help='num of heads')
+parser.add_argument('--e_layers', type=int, default=1, help='num of encoder layers')
 parser.add_argument('--d_layers', type=int, default=1, help='num of decoder layers')
-parser.add_argument('--d_ff', type=int, default=2048, help='dimension of fcn')
-parser.add_argument('--moving_avg', type=int, default=25, help='window size of moving average')
+parser.add_argument('--d_ff', type=int, default=256, help='dimension of fcn')
+parser.add_argument('--moving_avg', type=int, default=7, help='window size of moving average')
 parser.add_argument('--factor', type=int, default=1, help='attn factor')
-parser.add_argument('--distil', action='store_false',
-                    help='whether to use distilling in encoder, using this argument means not using distilling',
-                    default=True)
-parser.add_argument('--dropout', type=float, default=0.05, help='dropout')
-parser.add_argument('--embed', type=str, default='learned',
-                    help='time features encoding, options:[timeF, fixed, learned]')
+parser.add_argument('--distil', action='store_false', help='whether to use distilling in encoder, using this argument means not using distilling', default=False)
+parser.add_argument('--dropout', type=float, default=0.1, help='dropout')
+parser.add_argument('--embed', type=str, default='learned', help='time features encoding, options:[timeF, fixed, learned]')
 parser.add_argument('--activation', type=str, default='gelu', help='activation')
-parser.add_argument('--output_attention', action='store_true', help='whether to output attention in ecoder')
+parser.add_argument('--output_attention', action='store_true', help='whether to output attention in encoder')
 parser.add_argument('--do_predict', action='store_true', help='whether to predict unseen future data')
 
 

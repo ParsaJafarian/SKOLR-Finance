@@ -29,6 +29,7 @@ wheels/
 
 data/
 checkpoints/
+results/
 
 # Jupyter Notebook
 .ipynb_checkpoints
